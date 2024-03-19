@@ -1,0 +1,206 @@
+{
+  "defenseurs": [
+    {
+      "id": 1,
+      "name": "Smoke",
+      "nationality": "British",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 2,
+      "description": "Smoke, de son vrai nom James Porter, est un agent défensif britannique. Il est spécialisé dans l'utilisation de poisons mortels pour contrôler les voies d'approche ennemies. Ses grenades de fumée toxique sont redoutables dans la défense des positions clés.",
+      "img": "5NUuXBKokP1KmAGR8Q7fqE/9628143388fc1c2f50162c1ccdf94942/R6-operator-smoke.png"
+    },
+    {
+      "id": 2,
+      "name": "Mute",
+      "nationality": "British",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 3,
+      "description": "Mute, de son vrai nom Mark R. Chandar, est un agent défensif britannique expert en brouillage électronique. Ses dispositifs de brouillage peuvent neutraliser les drones ennemis et empêcher les communications adverses, ce qui en fait un atout précieux pour la sécurité de l'équipe.",
+      "img": "3gItFrDP0bBZsDXPdPp8ni/4314eb876028a87ae7fb20cc3215d3f6/R6-operator-mute.png"
+    },
+    {
+      "id": 3,
+      "name": "Castle",
+      "nationality": "American",
+      "health": 3,
+      "speed": 1,
+      "difficulty": 2,
+      "description": "Castle, de son vrai nom Miles Campbell, est un agent défensif américain spécialisé dans la fortification. Ses panneaux pare-balles renforcés peuvent bloquer les voies d'approche ennemies et offrir une protection supplémentaire à son équipe.",
+      "img": "569euf91mHD0ZceUnO5tVl/d2c58485cf44e51c130373fe8007f4d0/R6-operator-castle.png"
+    },
+    {
+      "id": 4,
+      "name": "Pulse",
+      "nationality": "American",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 2,
+      "description": "Pulse, de son vrai nom Jack Estrada, est un agent défensif américain expert en détection cardiaque. Son scanner cardiaque peut détecter les mouvements ennemis à travers les murs, offrant ainsi un avantage précieux en matière de renseignement et de surveillance.",
+      "img": "3eOrdhZhYBqcFJdD0ygcGI/ba8ce2069fd409480fc74b8a5dbf8afd/R6-operator-pulse.png"
+    },
+    {
+      "id": 5,
+      "name": "Doc",
+      "nationality": "French",
+      "health": 3,
+      "speed": 1,
+      "difficulty": 2,
+      "description": "Doc, de son vrai nom Gustave Kateb, est un médecin défensif français spécialisé dans la guérison rapide. Son pistolet stimulant peut réanimer les coéquipiers blessés et les maintenir en vie lors de situations critiques.",
+      "img": "7cZ1TDHehPRrgv6uJ2GIoy/d6feddd3fc1a0769a8ad56afa658e572/R6-operator-doc.png"
+    },
+    {
+      "id": 6,
+      "name": "Rook",
+      "nationality": "French",
+      "health": 3,
+      "speed": 1,
+      "difficulty": 1,
+      "description": "Rook, de son vrai nom Julien Nizan, est un agent défensif français spécialisé dans la protection de l'équipe. Son sac de plaques de blindage offre une protection supplémentaire à ses coéquipiers, ce qui les rend plus résistants aux tirs ennemis.",
+      "img": "17CNRjTOFVKS1Q8Zou4ZVD/663dae86e2902f210bf2b1504904dbd0/R6-operator-rook.png"
+    },
+    {
+      "id": 7,
+      "name": "Kapkan",
+      "nationality": "Russian",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 2,
+      "description": "Kapkan, de son vrai nom Maxin Basuda, est un agent défensif russe expert en pièges explosifs. Ses pièges à clous peuvent infliger des dégâts mortels aux ennemis imprudents, créant ainsi des obstacles mortels sur les voies d'approche ennemies.",
+      "img": "4DCZD6bED0srAvUDbciDgO/f7b915b1d07854638973fbc23aa0ad9b/R6-operator-kapkan.png"
+    },
+    {
+      "id": 8,
+      "name": "Tachanka",
+      "nationality": "Russian",
+      "health": 3,
+      "speed": 1,
+      "difficulty": 3,
+      "description": "Tachanka, de son vrai nom Alexsandr Senaviev, est un agent défensif russe spécialisé dans le soutien lourd. Son fusil DP-28 monté sur trépied peut fournir un feu de suppression massif, créant ainsi des zones de danger pour les ennemis et permettant à son équipe de prendre l'avantage.",
+      "img": "3anG5CUIzp0MWB9T6tIpy9/bd81ae97ecd984afe84813384eb027d8/r6s-operator-tachanka.png"
+    },
+    {
+      "id": 9,
+      "name": "Jäger",
+      "nationality": "German",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 2,
+      "description": "Jäger, de son vrai nom Marius Streicher, est un agent défensif allemand expert en défense aérienne. Ses systèmes de détection ADS peuvent neutraliser les grenades et les projectiles ennemis, offrant ainsi une protection supplémentaire à son équipe contre les attaques aériennes.",
+      "img": "18FXPSsVVIDvyKvMi4cmnO/bac05dd81df9a8f48336babdc5030cff/R6-operator-jager.png"
+    },
+    {
+      "id": 10,
+      "name": "Bandit",
+      "nationality": "German",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 2,
+      "description": "Bandit, de son vrai nom Dominic Brunsmeier, est un agent défensif allemand spécialisé dans la manipulation électrique. Ses batteries Barbed Wire peuvent électrifier les barbelés, infligeant des dégâts aux ennemis qui tentent de les traverser et rendant les gadgets électroniques ennemis inutilisables.",
+      "img": "7uF3w5MYCFA1zikIkECPi9/f03570fd8c7739361619726638561c7a/R6-operator-bandit.png"
+    }
+  ],
+  "attaquants": [
+    {
+      "id": 1,
+      "name": "Sledge",
+      "nationality": "British",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 1,
+      "description": "Sledge, de son vrai nom Seamus Cowden, est un agent d'assaut britannique. Il est spécialisé dans le forage et la destruction de barricades. Ses tactiques agressives et sa capacité à ouvrir rapidement de nouvelles voies en font un atout précieux pour son équipe.",
+      "img": "2p5MyJkqbsfL8kCRNJVhcz/90aa196a11f2ea49ea107aab69789053/R6-operator-sledge.png"
+    },
+    {
+      "id": 2,
+      "name": "Thatcher",
+      "nationality": "British",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 1,
+      "description": "Thatcher, de son vrai nom Mike Baker, est un agent d'assaut britannique spécialisé dans la suppression de l'électronique ennemie. Grâce à ses grenades EMP, il peut neutraliser les dispositifs électroniques adverses, ce qui permet à son équipe de progresser en toute sécurité.",
+      "img": "4yGZXsXNG7gxH0YIwnii6F/e895af50867dc913f192050c10913abd/R6-operator-thatcher.png"
+    },
+    {
+      "id": 3,
+      "name": "Ash",
+      "nationality": "Israeli",
+      "health": 1,
+      "speed": 3,
+      "difficulty": 2,
+      "description": "Ash, de son vrai nom Eliza Cohen, est une agente d'assaut israélienne agile et rapide. Elle est spécialisée dans la destruction de barricades à l'aide de son lance-roquettes M120 CREM. Sa capacité à ouvrir rapidement des lignes de tir lui permet de créer des opportunités pour son équipe.",
+      "img": "4uyWdmCF6zI9vcn4vKp9zx/1b9393a63e1071daeccb95732e530d40/r6-operator-ash_229846.png"
+    },
+    {
+      "id": 4,
+      "name": "Thermite",
+      "nationality": "American",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 1,
+      "description": "Thermite, de son vrai nom Jordan Trace, est un agent d'assaut américain spécialisé dans le perçage de murs renforcés. Avec son dispositif exothermique, il peut ouvrir des passages dans les structures les plus solides, offrant ainsi de nouvelles opportunités tactiques à son équipe.",
+      "img": "4c4cEUFWUwXTT4p3V5wAjm/e755c2a37a050de118eabc667c55c511/R6-operator-thermite.png"
+    },
+    {
+      "id": 5,
+      "name": "Twitch",
+      "nationality": "French",
+      "health": 1,
+      "speed": 3,
+      "difficulty": 2,
+      "description": "Twitch, de son vrai nom Emmanuelle Pichon, est une agente d'assaut française spécialisée dans les drones de surveillance. Son drone Shock Drone peut neutraliser les gadgets ennemis à distance, ce qui en fait un atout précieux pour le renseignement et le soutien tactique.",
+      "img": "5jaeo9LkOu6deQz4mOF9a2/9a07011ac08bc25d58cbfc828b442e3a/R6-operator-twitch.png"
+    },
+    {
+      "id": 6,
+      "name": "Montagne",
+      "nationality": "French",
+      "health": 3,
+      "speed": 1,
+      "difficulty": 2,
+      "description": "Montagne, de son vrai nom Gilles Touré, est un agent d'assaut français spécialisé dans le bouclier pare-balles. Avec son bouclier étendu, il peut protéger son équipe des tirs ennemis tout en avançant lentement vers sa cible. Sa présence imposante sur le terrain en fait un élément crucial de toute opération d'assaut.",
+      "img": "37v1tD14BQ9A59vqXO7I9p/ba1d199bf7697f5ede61b93cdec60686/R6-operator-montagne.png"
+    },
+    {
+      "id": 7,
+      "name": "Glaz",
+      "nationality": "Russian",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 1,
+      "description": "Glaz, de son vrai nom Timur Glazkov, est un agent d'assaut russe spécialisé dans le tir de précision. Son fusil de sniper OTs-03 lui permet d'éliminer les ennemis à longue distance avec une grande précision. Son expertise en observation et en élimination en fait un atout inestimable pour toute équipe d'assaut.",
+      "img": "1xYMcXH9CNiKHI5Wqoxw8y/ac8414157d7647ea8377dd5c7ce6d2bb/R6-operator-glaz.png"
+    },
+    {
+      "id": 8,
+      "name": "Fuze",
+      "nationality": "Russian",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 1,
+      "description": "Fuze, de son vrai nom Shuhrat Kessikbayev, est un agent d'assaut russe spécialisé dans le lancement de grenades. Avec son chargeur à sous-munitions, il peut déployer des grenades explosives ou fumigènes à travers les surfaces, créant ainsi des zones d'effet dévastatrices pour les ennemis.",
+      "img": "pzeHydBjAc16X63nQH6Sm/33adb500a2abe9fbcaf368fa601ef59b/R6-operator-fuze.png"
+    },
+    {
+      "id": 9,
+      "name": "Blitz",
+      "nationality": "German",
+      "health": 2,
+      "speed": 2,
+      "difficulty": 1,
+      "description": "Blitz, de son vrai nom Elias Kötz, est un agent d'assaut allemand spécialisé dans les flashbangs. Son bouclier éclairant lui permet de fournir un appui lumineux à son équipe tout en désorientant les ennemis avec des flashbangs. Sa capacité à perturber les lignes ennemies en fait un élément clé des opérations d'assaut.",
+      "img": "MlN3NUzTAYwPkFughKR23/19b3155bf7d69c7415cafa36f52f67e7/R6-operator-blitz.png"
+    },
+    {
+      "id": 10,
+      "name": "IQ",
+      "nationality": "German",
+      "health": 1,
+    "speed": 3,
+    "difficulty": 3,
+    "description": "IQ, de son vrai nom Monika Weiss, est une agente d'assaut allemande spécialisée dans la suppression d'électronique ennemie. Avec son détecteur électronique RED Mk III, elle peut repérer et neutraliser les gadgets électroniques ennemis à travers les murs, offrant ainsi un avantage tactique crucial à son équipe.",
+    "img": "2bdUfjHxFfSn9YzMjlUThL/d1b3519228790ba30785eebab03bbc38/R6-operator-iq.png"
+    }
+  ]
+}
