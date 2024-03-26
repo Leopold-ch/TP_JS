@@ -4,13 +4,46 @@
     overflow: hidden; /* Empêche le contenu de déborder */
 }
 
-.agent > *{
+.agent > * {
     width: 50%;
 }
 
 .agent .info {
+    text-align: justify;
     padding-left: 20px;
     background-color: #f0f0f065;
     border: thin solid black;
     border-radius: 10px;
+}
+
+.agent h2 {
+    text-align: center;
+}
+
+.agent .info > * {
+    padding-top: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+.health-indicator {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.health-circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.health-circle.full {
+    background-color: #fff; /* couleur du cercle plein */
+}
+
+.health-circle.empty {
+    background-color: transparent; /* couleur du cercle vide */
 }

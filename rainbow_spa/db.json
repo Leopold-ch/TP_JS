@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Sledge",
-      "nationality": "Grande-Bretagne",
+      "country": "Grande-Bretagne",
       "health": 2,
       "speed": 2,
       "difficulty": 1,
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "name": "Thatcher",
-      "nationality": "Grande-Bretagne",
+      "country": "Grande-Bretagne",
       "health": 2,
       "speed": 2,
       "difficulty": 1,
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "name": "Ash",
-      "nationality": "Israël",
+      "country": "Israël",
       "health": 1,
       "speed": 3,
       "difficulty": 2,
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "name": "Thermite",
-      "nationality": "États-Unis",
+      "country": "États-Unis",
       "health": 2,
       "speed": 2,
       "difficulty": 1,
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "name": "Twitch",
-      "nationality": "France",
+      "country": "France",
       "health": 1,
       "speed": 3,
       "difficulty": 2,
@@ -53,7 +53,7 @@
     {
       "id": 6,
       "name": "Montagne",
-      "nationality": "France",
+      "country": "France",
       "health": 3,
       "speed": 1,
       "difficulty": 2,
@@ -63,7 +63,7 @@
     {
       "id": 7,
       "name": "Glaz",
-      "nationality": "Russie",
+      "country": "Russie",
       "health": 2,
       "speed": 2,
       "difficulty": 1,
@@ -73,7 +73,7 @@
     {
       "id": 8,
       "name": "Fuze",
-      "nationality": "Russie",
+      "country": "Russie",
       "health": 2,
       "speed": 2,
       "difficulty": 1,
@@ -83,7 +83,7 @@
     {
       "id": 9,
       "name": "Blitz",
-      "nationality": "Allemagne",
+      "country": "Allemagne",
       "health": 2,
       "speed": 2,
       "difficulty": 1,
@@ -93,7 +93,7 @@
     {
       "id": 10,
       "name": "IQ",
-      "nationality": "Allemagne",
+      "country": "Allemagne",
       "health": 1,
     "speed": 3,
     "difficulty": 3,
@@ -105,7 +105,7 @@
     {
       "id": 10,
       "name": "Smoke",
-      "nationality": "Grande-Bretagne",
+      "country": "Grande-Bretagne",
       "health": 2,
       "speed": 2,
       "difficulty": 2,
@@ -115,7 +115,7 @@
     {
       "id": 11,
       "name": "Mute",
-      "nationality": "Grande-Bretagne",
+      "country": "Grande-Bretagne",
       "health": 2,
       "speed": 2,
       "difficulty": 3,
@@ -125,7 +125,7 @@
     {
       "id": 12,
       "name": "Castle",
-      "nationality": "États-Unis",
+      "country": "États-Unis",
       "health": 3,
       "speed": 1,
       "difficulty": 2,
@@ -135,7 +135,7 @@
     {
       "id": 13,
       "name": "Pulse",
-      "nationality": "États-Unis",
+      "country": "États-Unis",
       "health": 2,
       "speed": 2,
       "difficulty": 2,
@@ -145,7 +145,7 @@
     {
       "id": 14,
       "name": "Doc",
-      "nationality": "France",
+      "country": "France",
       "health": 3,
       "speed": 1,
       "difficulty": 2,
@@ -155,7 +155,7 @@
     {
       "id": 15,
       "name": "Rook",
-      "nationality": "France",
+      "country": "France",
       "health": 3,
       "speed": 1,
       "difficulty": 1,
@@ -165,7 +165,7 @@
     {
       "id": 16,
       "name": "Kapkan",
-      "nationality": "Russie",
+      "country": "Russie",
       "health": 2,
       "speed": 2,
       "difficulty": 2,
@@ -175,7 +175,7 @@
     {
       "id": 17,
       "name": "Tachanka",
-      "nationality": "Russie",
+      "country": "Russie",
       "health": 3,
       "speed": 1,
       "difficulty": 3,
@@ -185,7 +185,7 @@
     {
       "id": 18,
       "name": "Jäger",
-      "nationality": "Allemagne",
+      "country": "Allemagne",
       "health": 2,
       "speed": 2,
       "difficulty": 2,
@@ -195,7 +195,7 @@
     {
       "id": 19,
       "name": "Bandit",
-      "nationality": "Allemagne",
+      "country": "Allemagne",
       "health": 2,
       "speed": 2,
       "difficulty": 2,

@@ -1,7 +1,7 @@
 import Home from './views/pages/Home.js';
 import Attackers from './views/pages/Attackers.js';
 import Defenders from './views/pages/Defenders.js';
-import OperatorShow from './views/pages/OperatorShow.js';
+import Operator from './views/pages/Operator.js';
 import About from './views/pages/About.js';
 import Error404 from './views/pages/Error404.js';
 
@@ -13,7 +13,7 @@ const routes = {
     , '/about'              : About
     , '/attackers'           : Attackers
     , '/defenders'           : Defenders
-    , '/operators/:id'       : OperatorShow
+    , '/operators/:id'       : Operator
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
@@ -32,6 +32,23 @@ const router = async () => {
     let page = routes[parsedURL] ? new routes[parsedURL] : Error404
     
     content.innerHTML = await page.render();
+
+    // Supposons que op.health contient la valeur de santé
+
+    const healthIndicator = document.querySelector('.health-indicator');
+
+    for (let i = 1; i <= 3; i++) {
+        const circle = document.createElement('div');
+        circle.classList.add('health-circle');
+
+        if (i <= 2) {//op.health) {
+            circle.classList.add('full');
+        } else {
+            circle.classList.add('empty');
+        }
+
+        healthIndicator.appendChild(circle);
+    }
 }
 
 // Listen on hash change:
