@@ -4,8 +4,8 @@ import OperatorProvider from "./../../services/OperatorProvider.js";
 export default class Home {
 
     async render() {
-        let operators = await OperatorProvider.fetchAttackers(3)
-        let html = operators.map(op =>
+        let operators = await OperatorProvider.fetchAttackers(4)
+        let cartes = operators.map(op =>
             /*html*/`
             <li class="carte">
                 <h3>${op.name}</h3>
@@ -27,7 +27,7 @@ export default class Home {
             </p>
             <h2>Quelques agents</h2>
             <ul class='operators-list'>
-                ${html}
+                ${cartes}
             </ul>
         `;
     }

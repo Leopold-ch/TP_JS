@@ -1,11 +1,11 @@
 import OperatorProvider from "../../services/OperatorProvider.js";
 
-export default class OperatorAll {
+export default class Attackers {
 
     async render () {
         let operators = await OperatorProvider.fetchAttackers(20);
         let view =  /*html*/`
-            <h2>Tous les agents</h2>
+            <h2>Agents attaquants</h2>
             <ul class='operators-list'>
                 ${ operators.map(op => 
                     /*html*/`

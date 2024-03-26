@@ -1,0 +1,16 @@
+.agent {
+    display: flex;
+    margin: 3em;
+    overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+.agent > *{
+    width: 50%;
+}
+
+.agent .info {
+    padding-left: 20px;
+    background-color: #f0f0f065;
+    border: thin solid black;
+    border-radius: 10px;
+}

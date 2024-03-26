@@ -1,5 +1,4 @@
-import { ATTACKERS } from '../config.js'
-import { DEFENDERS } from '../config.js'
+import { ATTACKERS, DEFENDERS } from '../config.js'
 
 export default class OperatorProvider {
 
@@ -38,18 +37,28 @@ export default class OperatorProvider {
     }
 
     static getOperator = async (id) => {
+        const endpoints = [ATTACKERS, DEFENDERS];
         const options = {
-           method: 'GET',
-           headers: {
-               'Content-Type': 'application/json'
-           }
-       };
-       try {
-           const response = await fetch(`${ATTACKERS}/` + id, options)
-           const json = await response.json();
-           return json
-       } catch (err) {
-           console.log('Error getting documents', err)
-       }
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+    
+        for (const endpoint of endpoints) {
+            try {
+                const response = await fetch(`${endpoint}/${id}`, options);
+                if (response.ok) {
+                    const json = await response.json();
+                    return json;
+                }
+            } catch (err) {
+                console.log(`Error getting documents from ${endpoint}`, err);
+            }
+        }
+    
+        console.log('Documents not found in any endpoint');
+        return null; // Aucun document trouvé dans les endpoints spécifiés
     }
+    
 }

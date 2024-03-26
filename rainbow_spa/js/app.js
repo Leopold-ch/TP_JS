@@ -1,5 +1,6 @@
 import Home from './views/pages/Home.js';
-import OperatorAll from './views/pages/Attackers.js';
+import Attackers from './views/pages/Attackers.js';
+import Defenders from './views/pages/Defenders.js';
 import OperatorShow from './views/pages/OperatorShow.js';
 import About from './views/pages/About.js';
 import Error404 from './views/pages/Error404.js';
@@ -10,7 +11,8 @@ import Utils from './services/Utils.js';
 const routes = {
     '/'                     : Home
     , '/about'              : About
-    , '/operators'           : OperatorAll
+    , '/attackers'           : Attackers
+    , '/defenders'           : Defenders
     , '/operators/:id'       : OperatorShow
 };
 
@@ -18,7 +20,7 @@ const routes = {
 const router = async () => {
 
     // Lazy load view element:
-    const content = null || document.querySelector('#content');
+    const content = null || document.getElementById('content');
 
     // Get the parsed URl from the addressbar
     let request = Utils.parseRequestURL()
