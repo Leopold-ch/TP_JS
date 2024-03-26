@@ -4,21 +4,44 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Single page app</title>
+        <title>Rainbow 6 Siege SPA</title>
+        <link rel="icon" href="https://static-dm.ubisoft.com/siege/prod/favicon.ico"/>
         <link rel="stylesheet" href="css/index.css">
-        <script type="module" src="s/js/app.js" defer></script>
+        <link rel="stylesheet" href="css/header.css">
+        <script type="module" src="js/app.js"></script>
     </head>
 
     <body>
-
          
         <header>
-            <h1>Une application en une seule page !</h1>
+            <nav>
+                <ul>
+                    <li><a href="#/">Accueil</a></li>
+                    <li><a href="#/operators">Tous les agents</a></li>
+                    <li><a href="#/about">À propos</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
-            <!-- contenu JS -->
+
+            <div class=" py-5 bg-body-tertiary">
+                <div class="container">
+                    <div id="content"></div>
+                </div>
+            </div>
+
         </main>
+
+        <footer class="text-body-secondary py-5">
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+                <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+                        href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>
+            </div>
+        </footer>
     </body>
 
 </html>
