@@ -1,0 +1,51 @@
+.operators-list {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.carte {
+    margin: 3vh;
+    background-color: #fbeec19f;
+    border: 0.2em solid white;
+    border-radius: 5px;
+    width: calc(20%);
+    margin-bottom: 1rem;
+    padding: 1em;
+    /* flex-grow: 1; */
+}
+
+.carte h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.carte img{
+    max-width: 66%;
+    max-height: 66%
+}
+
+.carte a {
+    color: white;
+    background-color: #242424;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.carte a:hover {
+    color: white;
+    background-color: #3f3f3f;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}

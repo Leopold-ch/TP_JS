@@ -1,8 +1,9 @@
-header {
+header, footer {
     text-align: center;
     place-content: center;
     padding: 1em;
 }
+
 
 nav ul {
     list-style-type: none;

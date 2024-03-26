@@ -7,40 +7,28 @@ export default class Home {
         let operators = await OperatorProvider.fetchOperators(3)
         let html = operators.map(op =>
             /*html*/`
-            <div class="col">
-            <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">${op.name}</text></svg>
-                <div class="card-body">
-                    <p class="card-text">${op.nationality ? op.nationality.slice(0, 100) : ''}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                        <a href="#/operators/${op.id}" class="btn btn-sm btn-outline-secondary">+ détail sur ${op.name}</a>
-                        </div>
-                        <small class="text-body-secondary">${op.id}</small>
-                    </div>
-                </div>
-            </div>
-            </div>
+            <li class="carte">
+                <h3>${op.name}</h3>
+                <img src='${OperatorProvider.imgLink}${op.img}' />
+                <p>${op.description ? op.description.slice(0,100) : ''} ...</p>
+                <a href="#/operators/${op.id}">Plus d'info sur ${op.name}</a>
+            </li>
             `
         ).join('\n ');
         
         return /*html*/`
-            <section class="py-5 text-center container">
-                <div class="row py-lg-5">
-                    <div class="col-lg-6 col-md-8 mx-auto">
-                        <h1 class="fw-light">Operators example</h1>
-                        <p class="lead text-body-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, aliquid voluptas sit aperiam quis architecto quaerat vel ratione placeat delectus repellendus cum animi sequi amet corporis minima ab, nisi at!</p>
-                        <p>
-                            <a href="" class="btn btn-primary my-2">Main call to action</a>
-                            <a href="" class="btn btn-secondary my-2">Secondary action</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <h2>Les 3 premiers agents</h2>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <h2>Qu'est-ce que Rainbow 6 Siege ?</h2>
+            <p class="r6-desc">
+            Rainbow Six Siege, le jeu de tir tactique développé par Ubisoft, a captivé des millions de joueurs à travers le monde depuis sa sortie en 2015.
+            Avec son gameplay stratégique, ses mécaniques de jeu innovantes et son engagement constant envers les mises à jour et l'équilibrage,
+            Siege a solidifié sa place en tant que l'un des jeux de tir compétitifs les plus populaires sur le marché.
+            Au cœur de l'expérience Siege se trouvent les agents, des opérateurs spécialisés provenant de différentes unités d'élite à travers le monde.
+            Ce site en single page application est dédié aux premiers de la licences.
+            </p>
+            <h2>Quelques agents</h2>
+            <ul class='operators-list'>
                 ${html}
-            </div>
+            </ul>
         `;
     }
 }
