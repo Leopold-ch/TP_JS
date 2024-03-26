@@ -3,7 +3,7 @@ import OperatorProvider from "../../services/OperatorProvider.js";
 export default class OperatorAll {
 
     async render () {
-        let operators = await OperatorProvider.fetchOperators(50);
+        let operators = await OperatorProvider.fetchAttackers(20);
         let view =  /*html*/`
             <h2>Tous les agents</h2>
             <ul class='operators-list'>

@@ -1,7 +1,6 @@
 export default class About {
     async render () {
         return /*html*/`
-            <section class="section">
                 <h2>Pour en savoir plus</h2>
                 <p class='r6-desc'>Rainbow Six Siege est un jeu de tir tactique en ligne développé par Ubisoft Montréal et publié par Ubisoft. Lancé en décembre 2015, il a depuis lors captivé des millions de joueurs à travers le monde par son gameplay intense et stratégique.</p>
 
@@ -14,7 +13,6 @@ export default class About {
                 <p class='r6-desc'>Le jeu est également soutenu par une communauté active et passionnée, avec des mises à jour régulières apportant de nouveaux opérateurs, cartes et fonctionnalités. Ubisoft organise également des événements en jeu, des tournois esports et une série continue de contenus additionnels pour maintenir l'engagement des joueurs à long terme.</p>
                 
                 <p class='r6-desc'>Que vous soyez un joueur débutant cherchant à améliorer vos compétences tactiques ou un vétéran chevronné à la recherche de défis compétitifs, Rainbow Six Siege offre une expérience de jeu profonde, stimulante et gratifiante qui continue de repousser les limites du genre du jeu de tir tactique en ligne.</p>
-            </section>
         `
     }
 }

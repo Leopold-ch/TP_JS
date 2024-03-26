@@ -12,8 +12,6 @@ export default class OperatorShow {
                 <p> Operator name : ${post.name} </p>
                 <p> Operator descritpion : ${post.description} </p>
             </section>
-            <p><a href="/">back to home</a></p>
-            <p><a href="#/articles">back to all articles</a></p>
         `
     }
 }

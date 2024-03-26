@@ -1,5 +1,5 @@
 import Home from './views/pages/Home.js';
-import OperatorAll from './views/pages/OperatorAll.js';
+import OperatorAll from './views/pages/Attackers.js';
 import OperatorShow from './views/pages/OperatorShow.js';
 import About from './views/pages/About.js';
 import Error404 from './views/pages/Error404.js';

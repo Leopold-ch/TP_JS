@@ -1,10 +1,11 @@
-import { ENDPOINT } from '../config.js'
+import { ATTACKERS } from '../config.js'
+import { DEFENDERS } from '../config.js'
 
 export default class OperatorProvider {
 
     static get imgLink() {return 'https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/';}
 
-    static fetchOperators = async (limit = 10) => {
+    static fetchAttackers = async (limit = 5) => {
         const options = {
            method: 'GET',
            headers: {
@@ -12,7 +13,23 @@ export default class OperatorProvider {
            }
        };
        try {
-           const response = await fetch(`${ENDPOINT}?_limit=${limit}`, options)
+           const response = await fetch(`${ATTACKERS}?_limit=${limit}`, options)
+           const json = await response.json();
+           return json
+       } catch (err) {
+           console.log('Error getting documents', err)
+       }
+    }
+
+    static fetchDefenders = async (limit = 5) => {
+        const options = {
+           method: 'GET',
+           headers: {
+               'Content-Type': 'application/json'
+           }
+       };
+       try {
+           const response = await fetch(`${DEFENDERS}?_limit=${limit}`, options)
            const json = await response.json();
            return json
        } catch (err) {
@@ -28,7 +45,7 @@ export default class OperatorProvider {
            }
        };
        try {
-           const response = await fetch(`${ENDPOINT}/` + id, options)
+           const response = await fetch(`${ATTACKERS}/` + id, options)
            const json = await response.json();
            return json
        } catch (err) {
