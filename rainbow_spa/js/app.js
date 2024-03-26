@@ -19,9 +19,6 @@ const routes = {
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
 
-    // Lazy load view element:
-    const content = null || document.getElementById('content');
-
     // Get the parsed URl from the addressbar
     let request = Utils.parseRequestURL()
 
@@ -30,25 +27,11 @@ const router = async () => {
     // Get the page from our hash of supported routes.
     // If the parsed URL is not in our list of supported routes, select the 404 page instead
     let page = routes[parsedURL] ? new routes[parsedURL] : Error404
-    
-    content.innerHTML = await page.render();
-
-    // Supposons que op.health contient la valeur de santé
-
-    const healthIndicator = document.querySelector('.health-indicator');
-
-    for (let i = 1; i <= 3; i++) {
-        const circle = document.createElement('div');
-        circle.classList.add('health-circle');
-
-        if (i <= 2) {//op.health) {
-            circle.classList.add('full');
-        } else {
-            circle.classList.add('empty');
-        }
-
-        healthIndicator.appendChild(circle);
-    }
+    await page.render().then(result => {
+        const content = null || document.getElementById('content');
+        content.innerHTML = '';
+        content.appendChild(result);
+    });
 }
 
 // Listen on hash change:
