@@ -103,7 +103,7 @@
   ],
   "defenseurs": [
     {
-      "id": 10,
+      "id": 11,
       "name": "Smoke",
       "country": "Grande-Bretagne",
       "health": 2,
@@ -113,7 +113,7 @@
       "img": "5NUuXBKokP1KmAGR8Q7fqE/9628143388fc1c2f50162c1ccdf94942/R6-operator-smoke.png"
     },
     {
-      "id": 11,
+      "id": 12,
       "name": "Mute",
       "country": "Grande-Bretagne",
       "health": 2,
@@ -123,7 +123,7 @@
       "img": "3gItFrDP0bBZsDXPdPp8ni/4314eb876028a87ae7fb20cc3215d3f6/R6-operator-mute.png"
     },
     {
-      "id": 12,
+      "id": 13,
       "name": "Castle",
       "country": "États-Unis",
       "health": 3,
@@ -133,7 +133,7 @@
       "img": "569euf91mHD0ZceUnO5tVl/d2c58485cf44e51c130373fe8007f4d0/R6-operator-castle.png"
     },
     {
-      "id": 13,
+      "id": 14,
       "name": "Pulse",
       "country": "États-Unis",
       "health": 2,
@@ -143,7 +143,7 @@
       "img": "3eOrdhZhYBqcFJdD0ygcGI/ba8ce2069fd409480fc74b8a5dbf8afd/R6-operator-pulse.png"
     },
     {
-      "id": 14,
+      "id": 15,
       "name": "Doc",
       "country": "France",
       "health": 3,
@@ -153,7 +153,7 @@
       "img": "7cZ1TDHehPRrgv6uJ2GIoy/d6feddd3fc1a0769a8ad56afa658e572/R6-operator-doc.png"
     },
     {
-      "id": 15,
+      "id": 16,
       "name": "Rook",
       "country": "France",
       "health": 3,
@@ -163,7 +163,7 @@
       "img": "17CNRjTOFVKS1Q8Zou4ZVD/663dae86e2902f210bf2b1504904dbd0/R6-operator-rook.png"
     },
     {
-      "id": 16,
+      "id": 17,
       "name": "Kapkan",
       "country": "Russie",
       "health": 2,
@@ -173,17 +173,17 @@
       "img": "4DCZD6bED0srAvUDbciDgO/f7b915b1d07854638973fbc23aa0ad9b/R6-operator-kapkan.png"
     },
     {
-      "id": 17,
+      "id": 18,
       "name": "Tachanka",
       "country": "Russie",
       "health": 3,
       "speed": 1,
-      "difficulty": 3,
+      "difficulty": 1,
       "description": "Tachanka, de son vrai nom Alexsandr Senaviev, est un agent défensif russe spécialisé dans le soutien lourd. Son fusil DP-28 monté sur trépied peut fournir un feu de suppression massif, créant ainsi des zones de danger pour les ennemis et permettant à son équipe de prendre l'avantage.",
       "img": "3anG5CUIzp0MWB9T6tIpy9/bd81ae97ecd984afe84813384eb027d8/r6s-operator-tachanka.png"
     },
     {
-      "id": 18,
+      "id": 19,
       "name": "Jäger",
       "country": "Allemagne",
       "health": 2,
@@ -193,12 +193,12 @@
       "img": "18FXPSsVVIDvyKvMi4cmnO/bac05dd81df9a8f48336babdc5030cff/R6-operator-jager.png"
     },
     {
-      "id": 19,
+      "id": 20,
       "name": "Bandit",
       "country": "Allemagne",
-      "health": 2,
-      "speed": 2,
-      "difficulty": 2,
+      "health": 1,
+      "speed": 3,
+      "difficulty": 1,
       "description": "Bandit, de son vrai nom Dominic Brunsmeier, est un agent défensif allemand spécialisé dans la manipulation électrique. Ses batteries Barbed Wire peuvent électrifier les barbelés, infligeant des dégâts aux ennemis qui tentent de les traverser et rendant les gadgets électroniques ennemis inutilisables.",
       "img": "7uF3w5MYCFA1zikIkECPi9/f03570fd8c7739361619726638561c7a/R6-operator-bandit.png"
     }

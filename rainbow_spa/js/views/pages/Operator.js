@@ -20,39 +20,62 @@ export default class Operator {
         infoDiv.classList.add('info');
     
         let h2 = document.createElement('h2');
-        h2.innerHTML = `Agent <b>${op.name}</b>`;
+        h2.innerHTML = `Agent ${op.name}`;
     
         let healthIndicator = document.createElement('div');
-        healthIndicator.classList.add('health-indicator');
+        healthIndicator.classList.add('indicator');
+        let health = document.createElement('p');
+        health.textContent = `Vie : `;
+        healthIndicator.appendChild(health)
+
+        let speedIndicator = document.createElement('div');
+        speedIndicator.classList.add('indicator');
+        let speed = document.createElement('p');
+        speed.textContent = `Vitesse : `;
+        speedIndicator.appendChild(speed)
+
+        let difficultyIndicator = document.createElement('div');
+        difficultyIndicator.classList.add('indicator');
+        let difficulty = document.createElement('p');
+        difficulty.textContent = `Difficulté : `;
+        difficultyIndicator.appendChild(difficulty)
+    
+        function circle(indicator, value){
+            for (let i = 1; i <= 3; i++) {
+                let c = document.createElement('div');
+                c.classList.add('circle');
+
+                if (i <= value) {
+                    c.classList.add('full');
+                } else {
+                    c.classList.add('empty');
+                }
+
+                indicator.appendChild(c)
+            }
+        }
+
+        circle(healthIndicator, op.health)
+        circle(speedIndicator, op.speed)
+        circle(difficultyIndicator, op.difficulty)
     
         let h3 = document.createElement('h3');
         h3.textContent = `Pays d'origine : ${op.country}`;
     
         let p = document.createElement('p');
         p.id = 'bio';
-        p.textContent = `Description de l'agent : ${op.description}`;
+        p.textContent = `${op.description}`;
 
         imageDiv.appendChild(img);
         infoDiv.appendChild(h2);
-        infoDiv.appendChild(healthIndicator);
         infoDiv.appendChild(h3);
+        infoDiv.appendChild(healthIndicator);
+        infoDiv.appendChild(speedIndicator);
+        infoDiv.appendChild(difficultyIndicator);
         infoDiv.appendChild(p);
         section.appendChild(imageDiv);
         section.appendChild(infoDiv);
-    
 
-        for (let i = 1; i <= 3; i++) {
-            let circle = document.createElement('div');
-            circle.classList.add('health-circle');
-
-            if (i <= op.health) {
-                circle.classList.add('full');
-            } else {
-                circle.classList.add('empty');
-            }
-
-            healthIndicator.appendChild(circle);
-        }
         return section;
-    }    
+    }
 }
