@@ -9,7 +9,7 @@ export default class Home {
             /*html*/`
             <li class="carte">
                 <h3>${op.name}</h3>
-                <img src='${OperatorProvider.imgLink}${op.img}' />
+                <img src='${OperatorProvider.imgLink}${op.picture}' />
                 <p>${op.description ? op.description.slice(0,100) : ''} ...</p>
                 <a href="#/operators/${op.id}">Plus d'info sur ${op.name}</a>
             </li>

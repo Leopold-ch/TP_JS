@@ -14,13 +14,19 @@ export default class Operator {
         imageDiv.classList.add('image');
     
         let img = document.createElement('img');
-        img.src = `${OperatorProvider.imgLink}${op.img}`;
+        img.src = `${OperatorProvider.imgLink}${op.picture}`;
     
         let infoDiv = document.createElement('div');
         infoDiv.classList.add('info');
     
+        let identity = document.createElement('div');
+        identity.classList.add('identite');
         let h2 = document.createElement('h2');
         h2.innerHTML = `Agent ${op.name}`;
+        let logo = document.createElement('img');
+        logo.src = `${OperatorProvider.imgLink}${op.logo}`;
+        identity.appendChild(h2);
+        identity.appendChild(logo);
     
         let healthIndicator = document.createElement('div');
         healthIndicator.classList.add('indicator');
@@ -67,7 +73,7 @@ export default class Operator {
         p.textContent = `${op.description}`;
 
         imageDiv.appendChild(img);
-        infoDiv.appendChild(h2);
+        infoDiv.appendChild(identity);
         infoDiv.appendChild(h3);
         infoDiv.appendChild(healthIndicator);
         infoDiv.appendChild(speedIndicator);

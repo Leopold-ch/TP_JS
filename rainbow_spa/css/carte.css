@@ -13,15 +13,21 @@
     background-color: #fbeec19f;
     border: 0.2em solid white;
     border-radius: 5px;
-    width: calc(13%);
+    width: calc(16%);
     margin-bottom: 1rem;
     padding: 1em;
     /* flex-grow: 1; */
 }
 
-.carte h2 {
-    margin-top: 0;
-    margin-bottom: 1em;
+.identite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.identite img{
+    max-width: 14%;
+    max-height: 14%
 }
 
 .carte img{

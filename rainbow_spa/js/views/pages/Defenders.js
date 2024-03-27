@@ -19,7 +19,7 @@ export default class Defenders {
             opHeading.textContent = op.name;
     
             let img = document.createElement('img');
-            img.src = `${OperatorProvider.imgLink}${op.img}`;
+            img.src = `${OperatorProvider.imgLink}${op.picture}`;
     
             let description = document.createElement('p');
             description.textContent = op.description ? op.description.slice(0, 100) : '';
