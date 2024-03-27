@@ -4,7 +4,7 @@ import OperatorProvider from "./../../services/OperatorProvider.js";
 export default class Home {
 
     async render() {
-        let operators = await OperatorProvider.fetchAttackers(4);
+        let operators = await OperatorProvider.fetchRandomOperator(4);
         let cartes = operators.map(op =>
             /*html*/`
             <li class="carte">
