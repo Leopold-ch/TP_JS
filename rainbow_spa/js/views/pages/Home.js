@@ -1,20 +1,11 @@
 // Instantiate API
 import OperatorProvider from "./../../services/OperatorProvider.js";
+import CardProvider from "../../services/CardProvider.js";
 
 export default class Home {
 
     async render() {
         let operators = await OperatorProvider.fetchRandomOperator(4);
-        let cartes = operators.map(op =>
-            /*html*/`
-            <li class="carte">
-                <h3>${op.name}</h3>
-                <img src='${OperatorProvider.imgLink}${op.picture}' />
-                <p>${op.description ? op.description.slice(0,100) : ''} ...</p>
-                <a href="#/operators/${op.id}">Plus d'info sur ${op.name}</a>
-            </li>
-            `
-        ).join('\n');
     
         let h2_1 = document.createElement('h2');
         h2_1.textContent = "Qu'est-ce que Rainbow 6 Siege ?";
@@ -30,9 +21,7 @@ export default class Home {
         let h2_2 = document.createElement('h2');
         h2_2.textContent = "Quelques agents";
     
-        let ul = document.createElement('ul');
-        ul.classList.add('operators-list');
-        ul.innerHTML = cartes;
+        let ul = await CardProvider.getCardList(operators);
     
         let container = document.createElement('div');
         container.appendChild(h2_1);
