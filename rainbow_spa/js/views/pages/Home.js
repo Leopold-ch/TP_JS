@@ -23,7 +23,7 @@ export default class Home {
     
         let ul = await CardProvider.getCardList(operators);
     
-        let container = document.createElement('div');
+        let container = document.createElement('section');
         container.appendChild(h2_1);
         container.appendChild(p);
         container.appendChild(h2_2);

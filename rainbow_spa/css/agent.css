@@ -8,6 +8,22 @@
     width: 50%;
 }
 
+.agent aside {
+    width: 4vw;
+}
+
+.agent .left {
+    top: 50%;
+    left: 1%;
+    text-align: left;
+}
+
+.agent .right {
+    top: 50%;
+    right: 1%;
+    text-align: right;
+}
+
 .agent .info {
     text-align: justify;
     background-color: #f0f0f065;
@@ -50,3 +66,36 @@
 .circle.empty {
     background-color: transparent;
 }
+
+#coeur{
+    align-items: center;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+aside a{
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: #242424;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+#fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+

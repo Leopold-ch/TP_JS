@@ -34,3 +34,19 @@ h2 {
     padding-right: 7em;
     text-align: justify;
 }
+
+#delete{
+    margin: 3em;
+}
+
+#suppr{
+    align-items: center;
+    color: white;
+    background-color: #e72f2f;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+}

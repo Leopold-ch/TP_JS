@@ -58,7 +58,7 @@ export default class OperatorProvider {
         }
     
         console.log('Documents not found in any endpoint');
-        return null; // Aucun document trouvé dans les endpoints spécifiés
+        return null;
     }
 
     static fetchRandomOperator = async (limit = 5) => {

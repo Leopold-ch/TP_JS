@@ -3,6 +3,8 @@ import OperatorProvider from "./OperatorProvider.js";
 export default class CardProvider {
 
     static getCardList = async (operators) => {
+        console.log(999);
+        console.log(operators.length);
 
         let ul = document.createElement('ul');
         ul.classList.add('operators-list');

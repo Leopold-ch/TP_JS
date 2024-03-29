@@ -11,7 +11,7 @@ export default class Attackers {
     
         let ul = await CardProvider.getCardList(operators);
 
-        let container = document.createElement('div');
+        let container = document.createElement('section');
         container.appendChild(heading);
         container.appendChild(ul);
     

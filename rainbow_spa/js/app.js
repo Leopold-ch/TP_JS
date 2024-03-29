@@ -2,6 +2,7 @@ import Home from './views/pages/Home.js';
 import Attackers from './views/pages/Attackers.js';
 import Defenders from './views/pages/Defenders.js';
 import Operator from './views/pages/Operator.js';
+import Favorites from './views/pages/Favorites.js';
 import About from './views/pages/About.js';
 import Error404 from './views/pages/Error404.js';
 
@@ -11,9 +12,10 @@ import Utils from './services/Utils.js';
 const routes = {
     '/'                     : Home
     , '/about'              : About
-    , '/attackers'           : Attackers
-    , '/defenders'           : Defenders
-    , '/operators/:id'       : Operator
+    , '/attackers'          : Attackers
+    , '/defenders'          : Defenders
+    , '/operators/:id'      : Operator
+    , '/favorites'          : Favorites
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.

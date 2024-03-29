@@ -10,6 +10,20 @@ export default class Operator {
         let section = document.createElement('section');
         section.classList.add('agent');
     
+        let asideLeft = document.createElement('aside');
+        asideLeft.classList.add('left');
+        let buttonLeft = document.createElement('a');
+        buttonLeft.href = '/#/operators/' + JSON.stringify(op.id-1);
+        buttonLeft.textContent = '<';
+        asideLeft.appendChild(buttonLeft);
+    
+        let asideRight = document.createElement('aside');
+        asideRight.classList.add('right');
+        let buttonRight = document.createElement('a');
+        buttonRight.href = '/#/operators/' + JSON.stringify(op.id+1);
+        buttonRight.textContent = '>';
+        asideRight.appendChild(buttonRight);
+    
         let imageDiv = document.createElement('div');
         imageDiv.classList.add('image');
     
@@ -68,19 +82,55 @@ export default class Operator {
         let h3 = document.createElement('h3');
         h3.textContent = `Pays d'origine : ${op.country}`;
     
-        let p = document.createElement('p');
-        p.id = 'bio';
-        p.textContent = `${op.description}`;
+        let desc = document.createElement('p');
+        desc.id = 'bio';
+        desc.textContent = `${op.description}`;
 
+        let enFavoris = localStorage.getItem('favoris');
+        enFavoris = enFavoris ? JSON.parse(enFavoris) : [];
+
+        let fav = document.createElement('div');
+        fav.id = 'fav';
+        let heart = document.createElement('a');
+        heart.id = 'coeur';
+        heart.textContent = '♡︎';
+        if (enFavoris.includes(op.id)){
+            heart.textContent = '♥︎';
+        }
+
+        heart.addEventListener('click', function e(){
+            const coeur = document.getElementById('coeur');
+
+            if (coeur.textContent == '♡︎'){  //mise en favoris
+                coeur.textContent = '♥︎';
+                enFavoris.push(op.id);
+                console.log(enFavoris);
+                localStorage.setItem('favoris', JSON.stringify(enFavoris));
+
+            } else{                         // retrait des favoris
+                coeur.textContent = '♡︎';
+                let indexOperator = enFavoris.indexOf(op.id);
+                if (indexOperator !== -1){
+                    enFavoris.splice(indexOperator, 1);
+                }
+                console.log(enFavoris);
+                localStorage.setItem('favoris', JSON.stringify(enFavoris));
+            }
+        })
+
+        fav.appendChild(heart)
         imageDiv.appendChild(img);
         infoDiv.appendChild(identity);
         infoDiv.appendChild(h3);
         infoDiv.appendChild(healthIndicator);
         infoDiv.appendChild(speedIndicator);
         infoDiv.appendChild(difficultyIndicator);
-        infoDiv.appendChild(p);
+        infoDiv.appendChild(desc);
+        infoDiv.appendChild(fav);
+        section.appendChild(asideLeft);
         section.appendChild(imageDiv);
         section.appendChild(infoDiv);
+        section.appendChild(asideRight);
 
         return section;
     }
