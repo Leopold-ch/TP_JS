@@ -3,8 +3,6 @@ import OperatorProvider from "./OperatorProvider.js";
 export default class CardProvider {
 
     static getCardList = async (operators) => {
-        console.log(999);
-        console.log(operators.length);
 
         let ul = document.createElement('ul');
         ul.classList.add('operators-list');
@@ -20,7 +18,7 @@ export default class CardProvider {
             img.src = `${OperatorProvider.imgLink}${op.picture}`;
     
             let description = document.createElement('p');
-            description.textContent = op.description ? op.description.slice(0, 100) : '';
+            description.textContent = (op.description ? op.description.slice(0, 100) : '') + '...';
     
             let link = document.createElement('a');
             link.href = `#/operators/${op.id}`;

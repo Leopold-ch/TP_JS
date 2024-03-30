@@ -13,14 +13,16 @@ export default class Operator {
         let asideLeft = document.createElement('aside');
         asideLeft.classList.add('left');
         let buttonLeft = document.createElement('a');
-        buttonLeft.href = '/#/operators/' + JSON.stringify(op.id-1);
+        let previousID = await OperatorProvider.getPreviousID(op.id);
+        buttonLeft.href = '/#/operators/' + previousID;
         buttonLeft.textContent = '<';
         asideLeft.appendChild(buttonLeft);
     
         let asideRight = document.createElement('aside');
         asideRight.classList.add('right');
         let buttonRight = document.createElement('a');
-        buttonRight.href = '/#/operators/' + JSON.stringify(op.id+1);
+        let nextID = await OperatorProvider.getNextID(op.id);
+        buttonRight.href = '/#/operators/' + nextID;
         buttonRight.textContent = '>';
         asideRight.appendChild(buttonRight);
     
@@ -104,7 +106,6 @@ export default class Operator {
             if (coeur.textContent == '♡︎'){  //mise en favoris
                 coeur.textContent = '♥︎';
                 enFavoris.push(op.id);
-                console.log(enFavoris);
                 localStorage.setItem('favoris', JSON.stringify(enFavoris));
 
             } else{                         // retrait des favoris
@@ -113,7 +114,6 @@ export default class Operator {
                 if (indexOperator !== -1){
                     enFavoris.splice(indexOperator, 1);
                 }
-                console.log(enFavoris);
                 localStorage.setItem('favoris', JSON.stringify(enFavoris));
             }
         })

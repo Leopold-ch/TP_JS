@@ -79,6 +79,15 @@
     font-size: 3rem;
 }
 
+#coeur:hover{
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 aside a{
     position: fixed;
     top: 50%;
@@ -91,6 +100,10 @@ aside a{
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1.6rem;
+}
+
+aside a:hover{
+    background-color: #3f3f3f;
 }
 
 #fav {
