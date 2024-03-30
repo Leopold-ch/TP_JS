@@ -16,6 +16,7 @@ export default class CardProvider {
     
             let img = document.createElement('img');
             img.src = `${OperatorProvider.imgLink}${op.picture}`;
+            img.setAttribute("loading", "lazy")
     
             let description = document.createElement('p');
             description.textContent = (op.description ? op.description.slice(0, 100) : '') + '...';

@@ -1,0 +1,14 @@
+#about{
+    text-align: justify;
+    background-color: #f0f0f065;
+    border: thin solid black;
+    border-radius: 10px;
+    margin: 2vw 6vw 2vw 6vw;
+    padding: 1vw;
+}
+
+#about p{
+    margin: 1vw;
+    padding: 0;
+    font-size: 1.2em;
+}

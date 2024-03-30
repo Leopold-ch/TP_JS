@@ -27,14 +27,17 @@ export default class About {
         p6.classList.add('r6-desc');
         p6.textContent = `Que vous soyez un joueur débutant cherchant à améliorer vos compétences tactiques ou un vétéran chevronné à la recherche de défis compétitifs, Rainbow Six Siege offre une expérience de jeu profonde, stimulante et gratifiante qui continue de repousser les limites du genre du jeu de tir tactique en ligne.`;
     
+        let info = document.createElement('div');
+        info.id = 'about';
+        info.appendChild(p1);
+        info.appendChild(p2);
+        info.appendChild(p3);
+        info.appendChild(p4);
+        info.appendChild(p5);
+        info.appendChild(p6);
         let container = document.createElement('div');
         container.appendChild(h2);
-        container.appendChild(p1);
-        container.appendChild(p2);
-        container.appendChild(p3);
-        container.appendChild(p4);
-        container.appendChild(p5);
-        container.appendChild(p6);
+        container.appendChild(info);
     
         return container;
     }

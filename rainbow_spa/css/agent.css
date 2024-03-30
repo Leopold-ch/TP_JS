@@ -44,7 +44,7 @@
 .indicator {
     display: flex;
     padding-top: 1em;
-    align-items: center; /* Ajout de cette ligne */
+    align-items: center;
 }
 
 .indicator > p {

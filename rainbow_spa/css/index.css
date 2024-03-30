@@ -35,6 +35,10 @@ h2 {
     text-align: justify;
 }
 
+#content{
+    margin-bottom: 1.5vh;
+}
+
 #delete{
     margin: 3em;
 }
