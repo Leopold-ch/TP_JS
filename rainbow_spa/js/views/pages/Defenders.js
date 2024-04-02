@@ -1,29 +1,26 @@
 import OperatorProvider from "../../services/OperatorProvider.js";
 import CardProvider from "../../services/CardProvider.js";
+const VISIBLES = 9;
 
 export default class Defenders {
 
     async render () {
-        const operators = await OperatorProvider.fetchDefenders(20);
+        const operators = await OperatorProvider.fetchAllDefenders();
     
         //titre de la page
         let heading = document.createElement('h2');
         heading.textContent = 'Agents défensifs';
 
-        // Diviser les agents en segments de six
-        const segments = [];
-        for (let i = 0; i < operators.length; i += 9) {
-            segments.push(operators.slice(i, i + 9));
-        }
+        let currentIndex = 0; // Indice du segment actuel
     
         //générations des cartes des agents
-        let ul = await CardProvider.getCardList(segments[0]);
-
-        let currentSegmentIndex = 0; // Indice du segment actuel
+        let firstOperators = await OperatorProvider.fetchDefenders(currentIndex*VISIBLES, (currentIndex+1)*VISIBLES)
+        let ul = await CardProvider.getCardList(firstOperators);
 
         // Fonction pour afficher les agents d'un segment donné
-        async function renderCharacters(segmentIndex) {
-            let newUl = await CardProvider.getCardList(segments[segmentIndex]);
+        async function renderOperators(segmentIndex) {
+            let slicedOperators = await OperatorProvider.fetchDefenders(currentIndex*VISIBLES, (currentIndex+1)*VISIBLES)
+            let newUl = await CardProvider.getCardList(slicedOperators);
             let oldUl = document.querySelector('.operators-list');
             if (oldUl) {
                 oldUl.parentNode.removeChild(oldUl); // Supprime l'ancien ul s'il existe
@@ -40,9 +37,12 @@ export default class Defenders {
                     contentElement.appendChild(newUl); // Ajoute le nouvel ul à la fin s'il n'y a pas d'autre enfant
                 }
             }
+
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+            })
         }
-        
-        
 
         let pagination = document.createElement('div');
         pagination.id = 'pagination';
@@ -52,16 +52,16 @@ export default class Defenders {
         suiv.textContent = 'Page suivante';
 
         prec.addEventListener('click', function p() {
-            if (currentSegmentIndex > 0) {
-                currentSegmentIndex--;
-                renderCharacters(currentSegmentIndex);
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderOperators(currentIndex);
             }
         })
 
         suiv.addEventListener('click', function s() {
-            if (currentSegmentIndex < segments.length - 1) {
-                currentSegmentIndex++;
-                renderCharacters(currentSegmentIndex);
+            if (1 == 1){                                //(currentIndex < segments.length - 1) {
+                currentIndex++;
+                renderOperators(currentIndex);
             }
         })
 

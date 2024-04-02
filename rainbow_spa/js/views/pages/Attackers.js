@@ -4,7 +4,7 @@ import CardProvider from "../../services/CardProvider.js";
 export default class Attackers {
 
     async render () {
-        const operators = await OperatorProvider.fetchAllAttackers(20);
+        const operators = await OperatorProvider.fetchAllAttackers();
     
         //titre de la page
         let heading = document.createElement('h2');
@@ -41,8 +41,6 @@ export default class Attackers {
                 }
             }
         }
-        
-        
 
         let pagination = document.createElement('div');
         pagination.id = 'pagination';

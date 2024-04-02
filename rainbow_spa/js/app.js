@@ -34,6 +34,11 @@ const router = async () => {
         content.innerHTML = '';
         content.appendChild(result);
     });
+
+    window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+    })
 }
 
 // Listen on hash change:

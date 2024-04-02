@@ -36,7 +36,7 @@ export default class OperatorProvider {
         }
     }
 
-    static fetchAttackers = async (limit = 5) => {
+    static fetchAttackers = async (start = 0, limit = 10) => {
         const options = {
            method: 'GET',
            headers: {
@@ -44,7 +44,7 @@ export default class OperatorProvider {
            }
        };
        try {
-           const response = await fetch(`${ATTACKERS}?_limit=${limit}`, options)
+           const response = await fetch(`${ATTACKERS}?_start=${start}&_limit=${limit}`, options)
            const json = await response.json();
            return json
        } catch (err) {
@@ -52,7 +52,7 @@ export default class OperatorProvider {
        }
     }
 
-    static fetchDefenders = async (limit = 5) => {
+    static fetchDefenders = async (start = 0, limit = 10) => {
         const options = {
            method: 'GET',
            headers: {
@@ -60,7 +60,7 @@ export default class OperatorProvider {
            }
        };
        try {
-           const response = await fetch(`${DEFENDERS}?_limit=${limit}`, options)
+           const response = await fetch(`${DEFENDERS}?_start=${start}&_limit=${limit}`, options)
            const json = await response.json();
            return json
        } catch (err) {
