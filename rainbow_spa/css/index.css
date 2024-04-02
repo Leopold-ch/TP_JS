@@ -58,3 +58,40 @@ h2 {
 #suppr:hover{
     background-color: #d72a2a;
 }
+
+
+
+#pagination > button {
+    color: white;
+    background-color: #242424;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 1vh 1vw 0 1vw;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+#pagination > button::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fbeec1;
+    transition: top 0.5s ease; /* Transition de la position top */
+}
+
+#pagination > button:hover::before {
+    top: 100%; /* Déplacement vers le bas lors du survol */
+}
+
+
+#pagination > button:hover {
+    color: black;
+    background-color: #fbeec1; /* Couleur de fond lors du survol */
+}

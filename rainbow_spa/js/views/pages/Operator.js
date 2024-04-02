@@ -118,7 +118,7 @@ export default class Operator {
             }
         })
 
-        fav.appendChild(heart)
+        fav.appendChild(heart);
         imageDiv.appendChild(img);
         infoDiv.appendChild(identity);
         infoDiv.appendChild(h3);

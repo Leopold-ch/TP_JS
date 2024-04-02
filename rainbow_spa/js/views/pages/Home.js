@@ -5,7 +5,7 @@ import CardProvider from "../../services/CardProvider.js";
 export default class Home {
 
     async render() {
-        let operators = await OperatorProvider.fetchRandomOperator(4);
+        let operators = await OperatorProvider.fetchRandomOperator(3);
     
         let h2_1 = document.createElement('h2');
         h2_1.textContent = "Qu'est-ce que Rainbow 6 Siege ?";
