@@ -13,6 +13,7 @@ export default class CardProvider {
     
             let opHeading = document.createElement('h3');
             opHeading.textContent = op.name;
+            opHeading.id = op.id;
     
             let img = document.createElement('img');
             img.src = `${OperatorProvider.imgLink}${op.picture}`;

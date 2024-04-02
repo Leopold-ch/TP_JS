@@ -125,8 +125,8 @@ export default class OperatorProvider {
     }
 
     static getNextID = async (id) =>{
-        let previousOperator = await OperatorProvider.getOperator(id+1);
-        if (previousOperator){
+        let nextOperator = await OperatorProvider.getOperator(id+1);
+        if (nextOperator){
             return id+1;
         } else{
             return id;

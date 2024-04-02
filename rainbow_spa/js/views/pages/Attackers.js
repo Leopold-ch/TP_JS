@@ -1,45 +1,47 @@
 import OperatorProvider from "../../services/OperatorProvider.js";
 import CardProvider from "../../services/CardProvider.js";
+const VISIBLES = 9;
 
 export default class Attackers {
 
     async render () {
-        const operators = await OperatorProvider.fetchAllAttackers();
+        const operators = await OperatorProvider.fetchAttackers();
     
         //titre de la page
         let heading = document.createElement('h2');
         heading.textContent = 'Agents attaquants';
 
-        // Diviser les agents en segments de six
-        const segments = [];
-        for (let i = 0; i < operators.length; i += 9) {
-            segments.push(operators.slice(i, i + 9));
-        }
+        let currentIndex = 0;
     
         //générations des cartes des agents
-        let ul = await CardProvider.getCardList(segments[0]);
+        let firstOperators = await OperatorProvider.fetchAttackers(currentIndex*VISIBLES, (currentIndex+1)*VISIBLES)
+        let ul = await CardProvider.getCardList(firstOperators);
 
-        let currentSegmentIndex = 0; // Indice du segment actuel
-
-        // Fonction pour afficher les agents d'un segment donné
-        async function renderCharacters(segmentIndex) {
-            let newUl = await CardProvider.getCardList(segments[segmentIndex]);
+        // Fonction pour afficher les agents à l'écran
+        async function renderOperators() {
+            let slicedOperators = await OperatorProvider.fetchAttackers(currentIndex*VISIBLES, (currentIndex+1)*VISIBLES)
+            let newUl = await CardProvider.getCardList(slicedOperators);
             let oldUl = document.querySelector('.operators-list');
             if (oldUl) {
-                oldUl.parentNode.removeChild(oldUl); // Supprime l'ancien ul s'il existe
+                oldUl.parentNode.removeChild(oldUl);   // Supprime l'ancien ul s'il existe
             }
             let contentElement = document.querySelector('section');
-            let divElement = contentElement.querySelector('div'); // Récupère la div
+            let divElement = contentElement.querySelector('div');
             if (divElement) {
-                contentElement.insertBefore(newUl, divElement); // Ajoute le nouvel ul juste avant la div
+                contentElement.insertBefore(newUl, divElement);
             } else {
-                let ulElement = contentElement.querySelector('ul'); // Récupère l'ul
+                let ulElement = contentElement.querySelector('ul');
                 if (ulElement) {
-                    contentElement.insertBefore(newUl, ulElement.nextSibling); // Ajoute le nouvel ul juste après l'ul existant
+                    contentElement.insertBefore(newUl, ulElement.nextSibling);
                 } else {
-                    contentElement.appendChild(newUl); // Ajoute le nouvel ul à la fin s'il n'y a pas d'autre enfant
+                    contentElement.appendChild(newUl);
                 }
             }
+
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+            })
         }
 
         let pagination = document.createElement('div');
@@ -50,16 +52,19 @@ export default class Attackers {
         suiv.textContent = 'Page suivante';
 
         prec.addEventListener('click', function p() {
-            if (currentSegmentIndex > 0) {
-                currentSegmentIndex--;
-                renderCharacters(currentSegmentIndex);
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderOperators();
             }
         })
 
-        suiv.addEventListener('click', function s() {
-            if (currentSegmentIndex < segments.length - 1) {
-                currentSegmentIndex++;
-                renderCharacters(currentSegmentIndex);
+        suiv.addEventListener('click', async function s() {
+            let lastOp = document.querySelector('.operators-list').lastElementChild;
+            let lastId = parseInt(lastOp.querySelector('h3').id);
+            let nextId = await OperatorProvider.getNextID(lastId);
+            if (!currentIndex){
+                currentIndex++;
+                renderOperators();
             }
         })
 

@@ -11,30 +11,30 @@ export default class Defenders {
         let heading = document.createElement('h2');
         heading.textContent = 'Agents défensifs';
 
-        let currentIndex = 0; // Indice du segment actuel
+        let currentIndex = 0;
     
         //générations des cartes des agents
         let firstOperators = await OperatorProvider.fetchDefenders(currentIndex*VISIBLES, (currentIndex+1)*VISIBLES)
         let ul = await CardProvider.getCardList(firstOperators);
 
-        // Fonction pour afficher les agents d'un segment donné
-        async function renderOperators(segmentIndex) {
+        // Fonction pour afficher les agents à l'écran
+        async function renderOperators() {
             let slicedOperators = await OperatorProvider.fetchDefenders(currentIndex*VISIBLES, (currentIndex+1)*VISIBLES)
             let newUl = await CardProvider.getCardList(slicedOperators);
             let oldUl = document.querySelector('.operators-list');
             if (oldUl) {
-                oldUl.parentNode.removeChild(oldUl); // Supprime l'ancien ul s'il existe
+                oldUl.parentNode.removeChild(oldUl);   // Supprime l'ancien ul s'il existe
             }
             let contentElement = document.querySelector('section');
-            let divElement = contentElement.querySelector('div'); // Récupère la div
+            let divElement = contentElement.querySelector('div');
             if (divElement) {
-                contentElement.insertBefore(newUl, divElement); // Ajoute le nouvel ul juste avant la div
+                contentElement.insertBefore(newUl, divElement);
             } else {
-                let ulElement = contentElement.querySelector('ul'); // Récupère l'ul
+                let ulElement = contentElement.querySelector('ul');
                 if (ulElement) {
-                    contentElement.insertBefore(newUl, ulElement.nextSibling); // Ajoute le nouvel ul juste après l'ul existant
+                    contentElement.insertBefore(newUl, ulElement.nextSibling);
                 } else {
-                    contentElement.appendChild(newUl); // Ajoute le nouvel ul à la fin s'il n'y a pas d'autre enfant
+                    contentElement.appendChild(newUl);
                 }
             }
 
@@ -54,14 +54,17 @@ export default class Defenders {
         prec.addEventListener('click', function p() {
             if (currentIndex > 0) {
                 currentIndex--;
-                renderOperators(currentIndex);
+                renderOperators();
             }
         })
 
-        suiv.addEventListener('click', function s() {
-            if (1 == 1){                                //(currentIndex < segments.length - 1) {
+        suiv.addEventListener('click', async function s() {
+            let lastOp = document.querySelector('.operators-list').lastElementChild;
+            let lastId = parseInt(lastOp.querySelector('h3').id);
+            let nextId = await OperatorProvider.getNextID(lastId);
+            if (nextId != lastId){
                 currentIndex++;
-                renderOperators(currentIndex);
+                renderOperators();
             }
         })
 
