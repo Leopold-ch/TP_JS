@@ -1,0 +1,57 @@
+.operators-list {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.carte {
+    margin: 3vh;
+    background-color: #fbeec19f;
+    border: 0.2em solid white;
+    border-radius: 5px;
+    width: calc(21%);
+    margin-bottom: 1rem;
+    padding: 1em;
+    /* flex-grow: 1; */
+}
+
+.identite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.identite img{
+    max-width: 14%;
+    max-height: 14%
+}
+
+.carte img{
+    max-width: 88%;
+    max-height: 88%
+}
+
+.carte a {
+    color: white;
+    background-color: #242424;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.carte a:hover {
+    color: white;
+    background-color: #3f3f3f;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
